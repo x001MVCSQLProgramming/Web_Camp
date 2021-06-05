@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+     <div class="container">
+         <h1>Alerts</h1>
+         <div>
+             <div class="alert alert-primary">Lorem ipsum dolor sit amet.</div>
+             <div class="alert alert-secondary">Lorem ipsum dolor sit amet.</div>
+             <div class="alert alert-success">Lorem ipsum dolor sit amet.</div>
+             <div class="alert alert-info">Lorem ipsum dolor sit amet.</div>
+             <div class="alert alert-warning">Lorem ipsum <a class="alert-link" href="https://www.google.com">dolor</a> sit amet.</div>
+             <div class="alert alert-danger">Lorem ipsum <a class="alert-link" href="https://www.google.com">dolor</a> sit amet.</div>
+             <div class="alert alert-dark">Lorem ipsum <a class="alert-link" href="https://www.google.com">dolor</a> sit amet.</div>
+             <div class="alert alert-light">Lorem ipsum <a class="alert-link" href="https://www.google.com">dolor</a> sit amet.</div>
+             <div class="alert alert-primary">
+                 Lorem ipsum dolor sit amet.
+                 <button class="close" data-dismiss="alert">&times;</button>
+                 <!--src="js/bootstrap.bundle.min.js" sayesinde javascript özelliği aldı-->
+            </div>
+         </div>
+
+         <div>
+             <button id="btnKapat" class="btn btn-danger">Yukarıdaki tüm alertleri kapat</button>
+         </div>
+     </div>
+       <script src="js/jquery-3.5.1.min.js"></script>
+       <script src="js/bootstrap.bundle.min.js"></script>
+       <script>
+           $("#btnKapat").click(function(){
+                //$(".alert").alert("close");//doğrudan kaldırır.
+                $(".alert").toggle();//gizle/göster
+           });
+       </script>
+   </body>
+   </html>
