@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <!-- Alparslan","Cihan","Oğuz","Gülcan","Gökçen -->
+        <ul id="liste">
+            <li class="haric">Alparslan</li>
+            <li>Cihan</li>
+            <li class="haric">Oğuz</li>
+            <li>Gülcan</li>
+            <li>Gökçen</li>
+            <li>Zeki</li>
+            <li>Cengiz</li>
+            <li class="haric">Fatih</li>
+            <li class="haric">Burak</li>
+            <li class="haric">Savaş</li>
+        </ul>
+
+        <textarea id="ozet" rows="10" cols="40"></textarea>
+
+        <script src="jquery-3.6.0.min.js"></script>
+        <script>
+
+        var liler=$("li");
+        // li'lerin ilki
+        yazdir("İlk kişi: " + liler.first().text());
+        // li'lerin sonuncusu
+        yazdir("Son kişi: " +liler.last().text());
+        // li'lerin beşincisi
+        yazdir("5. kişi: " +liler.eq(4).text());
+
+        // yedinci'den sonraki isimleri al
+        yazdir("7.sonrası: " + liler.eq(6).nextAll().text()); 
+        
+        var adlar=liler.eq(6).nextAll().map(function(){
+            return this.innerText;
+        }).get().join(', ');
+        yazdir("7. sonrası: "+ adlar);
+        
+        // İlk bulduğu zeki'den sonrakini yazdir
+        var sonraki=liler.filter(function(index,li){
+            return li.innerText=="Zeki";
+        }).first().next().text();//next kullanımı nextAll gibi değil dikkat et.
+        yazdir("Zeki sonrası: " + sonraki);
+
+        // liste öğelerinin sonuncusunun kardeşlerini italic yap
+        liler.last().siblings().css("font-style", "italic");
+
+        // liste öğelerinin beşincisinin sonrasını bold yap
+        liler.eq(4).nextAll().css("font-weight", "bold");
+
+        // liste öğelerinden haric sınıfına sahip OLMAYANLARI getir
+        var dahiller=liler.not(".haric").get().map(x=> x.innerText).join(', ');
+        yazdir("haric sınıfsızlar: " + dahiller);
+        
+
+        function yazdir(metin) {
+            var icerik = $("#ozet").val();
+            $("#ozet").val(icerik  + metin + "\n");
+
+        }
+        </script>
+</body>
+</html>

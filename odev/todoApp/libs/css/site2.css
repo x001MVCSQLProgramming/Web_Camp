@@ -1,0 +1,10 @@
+body{
+   font-family: 'Raleway', sans-serif;
+}
+ul.todo-list>li{
+   margin:.75rem 0;/*Yukarıdan aşağıdan 0.75rem sağdan soldan 0 ver*/
+}
+
+li.done{
+   text-decoration: line-through;
+}

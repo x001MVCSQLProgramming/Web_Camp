@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Öğreniyorum</title>
+</head>
+<body>
+   <p>Lorem ipsum, dolor sit
+    <p id="onemli">amet consectetur adipisicing</p>
+    <p> elit. Facere!</p>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        //Tüm paragrafları getir ve arka planını sarı yap
+        // var dizi=document.querySelectorAll("p");
+
+        // for (var i=0;i<dizi.length;i++)
+        //     dizi[i].style.backgroundColor="yellow";
+
+
+            //jquery karşılığı
+            $("p").css("background-color","yellow")
+
+            var parag=document.getElementById("onemli");
+            // parag.style.fontWeight="bold";
+            
+            $("#onemli").css("font-weight","bold");
+
+
+    </script>
+  
+    
+</body>
+</html>
