@@ -1,0 +1,28 @@
+body{
+   font-family: 'Roboto', sans-serif;
+}
+
+
+.pp-action{
+    line-height:1.4;
+}
+
+.badge.badge-big{
+    font-size:90%;
+}
+
+.my_bg{
+    background: #3c0a8a;
+    color:white;
+}
+
+footer.main-footer {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: white;
+    background-color:slategray ;
+    margin-top: 50px;
+}
+footer.main-footer p{
+    margin: 0px;
+}
